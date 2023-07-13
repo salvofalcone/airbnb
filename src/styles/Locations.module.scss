@@ -1,0 +1,75 @@
+.Menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 62px;
+
+  &__Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px;
+    font-size: 12px;
+    color: grey;
+
+    &:hover {
+      border-bottom: 1px solid grey;
+      color: black;
+    }
+
+    &__Img {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}
+
+.Cards {
+  display: flex;
+  gap: 24px;
+  padding: 40px;
+}
+
+.Card {
+  cursor: pointer;
+  border-radius: 12px;
+  height: 396px;
+  width: 312px;
+  line-height: 20px;
+
+  &__Img {
+    height: 296px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+
+  .Title {
+    font-weight: bold;
+    color: black;
+  }
+
+  &__Info {
+    .Price {
+      margin-top: 8px;
+    }
+
+    &__Bold {
+      font-weight: bold;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    transition: all 350ms ease;
+  }
+}

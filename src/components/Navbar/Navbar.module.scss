@@ -1,0 +1,36 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid #80808087;
+
+  &__Logo,
+  &__Login {
+    font-size: 2rem;
+    cursor: pointer;
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  &__List {
+    display: flex;
+    gap: 24px;
+
+    &__Item {
+      list-style-type: none;
+
+      &__Link {
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        transform: scale(0.95);
+        transition: all 150ms ease-in-out;
+      }
+    }
+  }
+}
