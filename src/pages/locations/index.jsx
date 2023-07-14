@@ -8,13 +8,16 @@ import styles from "@/styles/Locations.module.scss";
 export default function Locations({ data }) {
   const router = useRouter();
 
-  // const [locationsData, setLocationsData] = useState({});
+  // PER AVANZATO
+  /*  
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("https://api.npoint.io/4c36ad988e444043179b")
-  //     .then((res) => res.json())
-  //     .then((data) => setLocationsData(data));
-  // }, []);
+  useEffect(() => {
+    fetch("https://api.npoint.io/4c36ad988e444043179b")
+      .then((res) => res.json())
+      .then((data) => setD(data));
+  }, []);
+ */
 
   const onHandleClick = (id) => router.push(`/locations/${id}`);
 
@@ -122,6 +125,8 @@ export default function Locations({ data }) {
   );
 }
 
+
+//da commentare per l'avanzato
 export async function getServerSideProps() {
   const res = await fetch("https://api.npoint.io/4c36ad988e444043179b");
   const data = res.status === 200 ? await res.json() : {};
