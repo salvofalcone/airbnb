@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { auth } from "@/mocks/auth";
 
 import { useState } from "react";
@@ -31,26 +33,39 @@ const Login = () => {
   };
 
   return (
-    <div className={styles.Login}>
-      <form onSubmit={onHandleSubmit} className={styles.Login__Form}>
-        <h2>Log In</h2>
-        <input
-          /* value={username} */
-          type="text"
-          placeholder="Username"
-          onChange={onHandleUsername}
-          required
-        />
-        <input
-          /* value={password} */
-          type="password"
-          placeholder="Password"
-          onChange={onHandlePassword}
-          required
-        />
-        <input type="submit" value="Log In" className={styles.Login__Submit} />
-      </form>
-    </div>
+    <>
+      <Head>
+        <title>Air B&B - Login</title>
+        <meta name="description" content="Air b&B clone app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <div className={styles.Login}>
+        <form onSubmit={onHandleSubmit} className={styles.Login__Form}>
+          <h2>Log In</h2>
+          <input
+            /* value={username} */
+            type="text"
+            placeholder="Username"
+            onChange={onHandleUsername}
+            required
+          />
+          <input
+            /* value={password} */
+            type="password"
+            placeholder="Password"
+            onChange={onHandlePassword}
+            required
+          />
+          <input
+            type="submit"
+            value="Log In"
+            className={styles.Login__Submit}
+          />
+        </form>
+      </div>
+    </>
   );
 };
 

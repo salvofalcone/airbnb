@@ -27,6 +27,7 @@ export const roomList = [
       ],
       featured: true,
     },
+    
     {
       id: 2,
       name: "Mountain Green Hotel",

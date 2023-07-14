@@ -6,11 +6,11 @@
 
 .App {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   font-size: 16px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-inline: 24px;
+
 }

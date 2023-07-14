@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
@@ -25,14 +27,23 @@ const Dashboard = () => {
   };
 
   return (
-    <div className={styles.Dashboard}>
-      <h2>Dashboard</h2>
-      <p>Welcome back, {auth.name}! </p>
+    <>
+      <Head>
+        <title>Air B&B - Dashboard</title>
+        <meta name="description" content="Air b&B clone app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      <div className={styles.Logout} onClick={logOut}>
-        <BiLogOut />
+      <div className={styles.Dashboard}>
+        <h2>Dashboard</h2>
+        <p>Welcome back, {auth.name}! </p>
+
+        <div className={styles.Logout} onClick={logOut}>
+          <BiLogOut />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

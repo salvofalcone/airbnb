@@ -1,0 +1,35 @@
+.Card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .GoBack {
+    font-size: 2rem;
+    position: absolute;
+    top: 90px
+
+  }
+
+  &__Top {
+    width: 100%;
+  }
+
+  &__Title {
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  &__Images {
+    // display: flex;
+    height: 400px;
+    border-radius: 12px;
+  }
+
+  &__Img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+  }
+}
