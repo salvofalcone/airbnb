@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { GlobalContext } from "@/pages/_app";
+
 import Link from "next/link";
 
 import { BiChip, BiUserCircle, BiLogOut } from "react-icons/bi";
@@ -5,6 +8,9 @@ import { BiChip, BiUserCircle, BiLogOut } from "react-icons/bi";
 import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
+  const context = useContext(GlobalContext);
+  const userName = context.user.name;
+
   return (
     <div className={styles.Navbar}>
       <p className={styles.Navbar__Logo}>
@@ -39,11 +45,14 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <span className={styles.Navbar__Login} key="login">
-        <Link href="/login" className={styles.Navbar__List__Item__Link}>
-          <BiUserCircle />
-        </Link>
-      </span>
+      <div className={styles.Navbar__LoginMain}>
+        <span>{userName}</span>
+        <span className={styles.Navbar__Login} key="login">
+          <Link href="/login" className={styles.Navbar__List__Item__Link}>
+            <BiUserCircle />
+          </Link>
+        </span>
+      </div>
     </div>
   );
 };

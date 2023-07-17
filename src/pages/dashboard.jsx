@@ -1,7 +1,7 @@
- import Head from "next/head";
-
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+
+import Head from "next/head";
 
 import { auth } from "@/mocks/auth";
 import { BiLogOut } from "react-icons/bi";
